@@ -20,7 +20,7 @@ const (
 	// Block proposer of block height X is chosen from sigchain produced during
 	// block X-SigChainPropagationHeightOffset-SigChainPropogationTime because
 	// sigchain can only propagate when block height <=
-	// X-SigChainPropagationHeightOffset, so it has to start propogating when
+	// X-SigChainPropagationHeightOffset, so it has to start propagating when
 	// block height <= X-SigChainPropagationHeightOffset-SigChainPropogationTime.
 	SigChainMiningHeightOffset = config.SigChainPropogationTime + SigChainPropagationHeightOffset
 )

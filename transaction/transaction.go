@@ -178,7 +178,7 @@ func (tx *Transaction) GetProgramHashes() ([]common.Uint160, error) {
 		sender := payload.(*pb.IssueAsset).Sender
 		hashes = append(hashes, common.BytesToUint160(sender))
 	default:
-		return nil, errors.New("unsupport transaction type")
+		return nil, errors.New("unsupported transaction type")
 	}
 
 	return hashes, nil

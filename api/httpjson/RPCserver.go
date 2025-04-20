@@ -171,7 +171,7 @@ func (s *RPCServer) Handle(w http.ResponseWriter, r *http.Request) {
 			case bool: // set remoteAddr if it's true or false
 				params["RemoteAddr"] = r.RemoteAddr
 			default:
-				log.Warningf("RemoteAddr unsupport type for %v", addr)
+				log.Warningf("RemoteAddr unsupported type for %v", addr)
 			}
 		}
 

@@ -288,7 +288,7 @@ func (localNode *LocalNode) requestTxnPoolHashHandler(remoteMessage *node.Remote
 }
 
 // send to a neighbor a REQ_SYNC_TXN_POOL request message, and wait for reply with timeout
-// return the reply messge RPL_SYNC_TXN_POOL
+// return the reply message RPL_SYNC_TXN_POOL
 func (localNode *LocalNode) requestSyncTxnPool(remoteNode *node.RemoteNode) (*pb.Transactions, error) {
 
 	msg, err := NewReqSyncTxnPoolMessage(localNode.TxnPool)

@@ -113,7 +113,7 @@ func (remoteNode *RemoteNode) IsStopped() bool {
 func (remoteNode *RemoteNode) SendBytesAsync(buf []byte) error {
 	err := remoteNode.localNode.GetNnet().SendBytesDirectAsync(buf, remoteNode.NnetNode)
 	if err != nil {
-		log.Debugf("Error sending async messge to node %v, removing node.", err.Error())
+		log.Debugf("Error sending async message to node %v, removing node.", err.Error())
 		remoteNode.CloseConn()
 		remoteNode.localNode.RemoveNeighborNode(remoteNode.GetID())
 	}
@@ -135,7 +135,7 @@ func (remoteNode *RemoteNode) SendBytesSyncWithTimeout(buf []byte, replyTimeout 
 func (remoteNode *RemoteNode) SendBytesReply(replyToID, buf []byte) error {
 	err := remoteNode.localNode.GetNnet().SendBytesDirectReply(replyToID, buf, remoteNode.NnetNode)
 	if err != nil {
-		log.Debugf("Error sending async messge to node: %v, removing node.", err.Error())
+		log.Debugf("Error sending async message to node: %v, removing node.", err.Error())
 		remoteNode.CloseConn()
 		remoteNode.localNode.RemoveNeighborNode(remoteNode.GetID())
 	}

@@ -122,7 +122,7 @@ func (localNode *LocalNode) requestAddrNonce(remoteNode *node.RemoteNode) (*pb.A
 }
 
 // send to a neighbor a REQ_SYNC_ADDR_TXN request message, and wait for reply with timeout
-// return the reply messge RPL_SYNC_ADDR_TXN
+// return the reply message RPL_SYNC_ADDR_TXN
 func (localNode *LocalNode) requestSyncAddrTxn(remoteNode *node.RemoteNode, addr []byte, nonce uint64) (*pb.Transactions, error) {
 
 	msg, err := NewReqSyncAddrTxnMessage(addr, nonce)

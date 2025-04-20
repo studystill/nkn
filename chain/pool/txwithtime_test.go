@@ -151,7 +151,7 @@ func TestAppendTwt(t *testing.T) {
 	require.Equal(t, numTxn, tp.twtCount)
 	require.Equal(t, fingerprint, tp.twtFingerprint)
 
-	// pop out twt from oldest to newest, they should be same order as we appened them.
+	// pop out twt from oldest to newest, they should be same order as we append them.
 	for i := 0; i < numTxn; i++ {
 		pair := tp.twtMap.Oldest()
 		twt := pair.Value.(*txnWithTime)
